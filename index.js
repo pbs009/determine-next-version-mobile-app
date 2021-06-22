@@ -7,6 +7,7 @@ function setBuildVersion(code) {
 }
 
 async function listAllTags(octokit, owner, repo) {
+  console.log("Inside list all tags")
   var page = 1;
   var tags = [];
   while (true) {
@@ -24,6 +25,7 @@ async function listAllTags(octokit, owner, repo) {
     tags.push(...newTags);
     page++;
   }
+    console.log(tags)
   return tags;
 }
 
